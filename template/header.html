@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'header/responsee.css' %}">
+    <link rel="stylesheet" href="{% static 'header/template-style.css' %}">
+
+    <!-- JAVASCRIPT -->
+    <script type="text/javascript" src="{% static 'header/jquery-1.8.3.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'header/owl.carousel.js' %}"></script>
+    <script type="text/javascript" src="{% static 'header/template-scripts.js' %}"></script> 
+
+    <!-- FONT -->
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,400,600,900&subset=latin-ext" rel="stylesheet">
+
+</head>
+<body>
+
+    <header role="banner" class="position-absolute margin-top-30 margin-m-top-0 margin-s-top-0">    
+        <nav class="background-transparent background-transparent-hightlight full-width sticky">
+          <div class="s-12 l-2">
+            <a href="#" class="logo">
+              <!-- Logo version before sticky nav -->
+              <img class="logo-before" src="{% static 'header/final-logo-1.png' %}" alt="">
+              <!-- Logo version after sticky nav -->
+              <img class="logo-after" src="{% static 'header/final-logo-1.png' %}" alt="">
+            </a>
+          </div>
+          <div class="s-12 l-10">
+            <div class="top-nav right">
+              <p class="nav-text"></p>
+              <ul class="right chevron">
+                <li><a href="{% url 'all' %}">Home</a></li>
+                <li><a href="{% url 'album' %}">Albums</a></li>
+                <li><a href="{% url 'fav' %}">Favourites</a></li> 
+                <li><a href="{% url 'upload' %}">Upload</a></li>           
+                <li><a href="{% url 'profile' %}">Profile</a></li>
+                <li><a href="{% url 'signout' %}">Signout</a></li>
+              </ul>
+            </div>
+          </div>  
+        </nav>
+    </header>
+
+
+</body>
+</html>

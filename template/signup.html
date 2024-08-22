@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link href="{% static 'css/bootstrap.min.css' %} " rel="stylesheet">
+    <link href="{% static 'css/tooplate-little-fashion.css' %}" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'header/responsee.css' %}">
+    <link rel="stylesheet" href="{% static 'header/template-style.css' %}">
+    
+    <!-- JAVASCRIPT -->
+    <script type="text/javascript" src="{% static 'header/jquery-1.8.3.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'header/owl.carousel.js' %}"></script>
+    <script type="text/javascript" src="{% static 'header/template-scripts.js' %}"></script> 
+    
+    <!-- FONT -->
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,400,600,900&subset=latin-ext" rel="stylesheet">
+
+</head>
+<header role="banner" class="position-absolute margin-top-30 margin-m-top-0 margin-s-top-0">    
+    <nav class="background-transparent background-transparent-hightlight full-width sticky">
+      <div class="s-12 l-2">
+        <a href="#" class="logo">
+          <!-- Logo version before sticky nav -->
+          <img class="logo-before" src="{% static 'header/final-logo-1.png' %}" alt="">
+          <!-- Logo version after sticky nav -->
+          <img class="logo-after" src="{% static 'header/final-logo-1.png' %}" alt="">
+        </a>
+      </div>  
+    </nav>
+</header>
+<header class="section background-white">
+    <div class="line text-center">        
+      <h1 class="text-dark text-s-size-30 text-m-size-40 text-l-size-headline text-thin text-line-height-1">Sign up</h1>
+    </div>  
+  </header>
+<body>
+    
+
+
+    <section class="sign-in-form section-padding">
+        <div class="container">
+            <div class="row">
+    
+                <div class="col-lg-8 mx-auto col-12">
+    
+                    <div class="row">
+                        <div class="col-lg-8 col-11 mx-auto">
+    
+                            <form method="post">
+                                {% csrf_token %}
+                                
+                                
+                                <div class="form-floating">
+                                    {{form.username}}
+                                    <label for="username">Username</label>
+                                </div>
+                                
+                                
+    
+                                <div class="form-floating my-4">
+                                    {{form.password1}}
+                                    <label for="password">Password</label>
+                                    
+                                </div>
+    
+                                <div class="form-floating">
+                                    {{form.password2}}
+                                    <label for="confirm_password">Password Confirmation</label>
+                                </div>
+    
+                                <button type="submit" class="btn custom-btn form-control mt-4 mb-3">
+                                    Create account
+                                </button>
+    
+                                <p class=" register text-center">Already have an account? Please <a href="{% url 'signin' %}">Sign In</a></p>
+    
+                            </form>
+                        </div>
+                    </div>
+                    
+                </div>
+    
+            </div>
+        </div>
+    </section>
+    
+  
+
+</body>
+</html>

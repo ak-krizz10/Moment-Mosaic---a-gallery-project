@@ -1,0 +1,413 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Moirai+One&family=Tangerine:wght@700&display=swap');
+
+
+.containerbody{
+    min-height: 500px;
+    width: 90%;
+    margin-left: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3.5%;
+    row-gap: 20px;
+    padding-bottom: 3rem;
+}
+
+.imagesize{
+    height: 250px;
+    width: 250px;
+    object-fit: cover;
+}
+
+
+.imagebody{
+  min-height: 900px;
+  width: 90%;
+  margin-left: 5%;
+  display: flex;
+  flex-direction: column;
+  background-color: whitesmoke;
+  padding: 1.7rem;
+  
+}
+
+
+.fullimage{
+  align-self: center;
+}
+
+
+.imageactions{
+  width: 90%;
+  align-self: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 2rem;
+  row-gap: 30px; 
+}
+
+
+.ag-format-container {
+    width: 1142px;
+    margin: 0 auto;
+  }
+  
+.ag-courses_box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+
+  }
+.ag-courses_item {
+    -ms-flex-preferred-size: calc(33.33333% - 30px);
+    flex-basis: calc(33.33333% - 30px);
+  
+    margin: 0 15px 30px;
+  
+    overflow: hidden;
+  
+    border-radius: 28px;
+    
+  }
+.ag-courses-item_link {
+    display: block;
+    padding: 30px 20px;
+    background-color: white;
+  
+    overflow: hidden;
+    text-decoration: none;
+    border: 1px solid black;
+    position: relative;
+  }
+.ag-courses-item_link:hover .ag-courses-item_title {
+    text-decoration: none;
+    color: white;
+}
+.ag-courses-item_link:hover .ag-courses-item_date {
+    text-decoration: none;
+    color: white;
+  }
+.ag-courses-item_link:hover .ag-courses-item_bg {
+    -webkit-transform: scale(10);
+    -ms-transform: scale(10);
+    transform: scale(10);
+  }
+.ag-courses-item_title {
+    min-height: 87px;
+    margin: 0 0 25px;
+  
+    overflow: hidden;
+  
+    font-weight: bold;
+    font-size: 30px;
+    color: black;
+  
+    z-index: 2;
+    position: relative;
+  }
+.ag-courses-item_date-box {
+    font-size: 18px;
+    color: black;
+
+    z-index: 2;
+    position: relative;
+  }
+.ag-courses-item_date {
+    font-weight: bold;
+    color: black;
+  
+    -webkit-transition: color .5s ease;
+    -o-transition: color .5s ease;
+    transition: color .5s ease
+  }
+.ag-courses-item_bg {
+    height: 128px;
+    width: 128px;
+    background-color: black;
+  
+    z-index: 1;
+    position: absolute;
+    top: -75px;
+    right: -75px;
+  
+    border-radius: 50%;
+
+    -webkit-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+  }
+
+  .uploadbody{
+    height: 300px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.albumninput{
+    margin-bottom: 20px;
+
+}
+
+.albumninput input{
+  margin-left: 5%;
+
+}
+
+.albumninput input::placeholder{
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.albumninput input[type=text]{
+    height: 60px;
+    width: 90%;
+    font-size: 24px;
+    border-radius: 2px;
+    border: 1px solid black;
+    margin-bottom: 20px;
+}
+.albumninput input[type=file]{
+    height: 60px;
+    width: 90%;
+    border-radius: 2px;
+    padding: 10px;
+    border: 1px solid black;
+    margin-bottom: 20px;
+}
+
+.albumninput input[type=file]::file-selector-button {
+    margin-right: 20px;
+    border: none;
+    background: white;
+    padding: 10px 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    color: black;
+    cursor: pointer;
+    transition: background .2s ease-in-out;
+  }
+  
+.albumninput input[type=file]::file-selector-button:hover {
+    background: black;
+    color: white;
+}
+
+.albumninput input[type=submit]{
+    height: 50px;
+    width: 90%;
+    background: black;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: background .2s ease-in-out;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+/*      PROFILE      */
+/* ================= */
+
+
+.profilebody{
+  width: 90%;
+  margin-left: 5%;
+  box-sizing: border-box;
+  padding: 3rem;
+  padding-top: 0;
+  margin-bottom: 2rem;
+  background-color: 	darkgrey;
+  display: flex;
+  color: black;
+}
+
+
+.user-area{
+
+  width: 50%;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.user-area img{
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+}
+
+.user-area p{
+  font-family: "Caveat", cursive;
+  font-size: 40px;
+  margin: 10px;
+  transform: rotate(-8deg);
+  color: black;
+}
+
+
+.about-area{
+  width: 50%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  
+}
+
+
+.info{
+  width: 80%;
+
+  display: flex;
+  justify-content: space-around;
+  padding-top: 2rem;
+  color: black;
+}
+
+.about p{
+  font-size: large;
+  color: black;
+}
+.infodiv{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.infodiv .p1{
+  font-size: 24px;
+  color: black;
+}
+
+.infodiv p{
+  margin: 3px;
+  font-size: 20px;
+  color: black;
+}
+
+/* Profile form */
+.profileuploadbody{
+  height: 300px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+}
+.profileinput{
+  margin-bottom: 20px;
+  padding-bottom: 5rem;
+
+}
+
+.profileinput input{
+margin-left: 20%;
+
+}
+
+.profileinput input::placeholder{
+  font-size: 18px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.profileinput input[type=text]{
+  height: 60px;
+  width: 60%;
+  font-size: 24px;
+  border-radius: 2px;
+  border: 1px solid black;
+  margin-bottom: 20px;
+}
+.profileinput input[type=email]{
+  height: 60px;
+  width: 60%;
+  font-size: 24px;
+  border-radius: 2px;
+  border: 1px solid black;
+  margin-bottom: 20px;
+}
+.profileinput input[type=file]{
+  height: 60px;
+  width: 60%;
+  border-radius: 2px;
+  padding: 10px;
+  border: 1px solid black;
+  margin-bottom: 20px;
+}
+.profileinput input[type=date]{
+  height: 60px;
+  width: 60%;
+  border-radius: 2px;
+  padding: 10px;
+  border: 1px solid black;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+
+.profileinput input[type=file]::file-selector-button {
+  margin-right: 20px;
+  border: none;
+  background: white;
+  padding: 10px 20px;
+  border: 1px solid black;
+  border-radius: 10px;
+  color: black;
+  cursor: pointer;
+  transition: background .2s ease-in-out;
+}
+
+.profileinput input[type=file]::file-selector-button:hover {
+  background: black;
+  color: white;
+}
+
+.profileinput input[type=submit]{
+  height: 50px;
+  width: 60%;
+  background: black;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  transition: background .2s ease-in-out;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 18px;
+  font-weight: bolder;
+}
+
+
+.profile-edit{
+  height: 50px;
+  width: 20%;
+  margin-left: 40%;
+  margin-bottom: 3rem;
+}
+
+.profile-edit button{
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 20px;
+  letter-spacing: 2px;
+  
+}
+.profile-edit button:hover{
+  background-color: black;
+  color: white;
+
+}

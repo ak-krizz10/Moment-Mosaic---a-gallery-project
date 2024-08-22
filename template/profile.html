@@ -1,0 +1,44 @@
+{% extends 'base1.html' %}
+{% load static %}
+
+
+
+{% block content %}
+<header class="section background-white">
+    <div class="line text-center">        
+      <h1 class="text-dark text-s-size-30 text-m-size-40 text-l-size-headline text-thin text-line-height-1">Profile</h1>
+      <p class="margin-bottom-0 text-size-16 text-dark">Precious moments , Precious clicks </p>
+    </div>  
+  </header>
+
+
+    <div class="profilebody">
+        <div class="user-area">
+            <img src="{{profile.pic}}">
+            <p>-{{profile.name}}-</p>
+        </div>
+        <div class="about-area">
+            <div>
+                <h1>About</h1>
+            </div>
+            <div class="about">
+                <p>DOB : {{profile.dob}} </p>
+                <p>email : {{profile.email}}</p>
+            </div>
+            <div class="info">
+                <div class="infodiv">
+                    <p class="p1">Photos</p>
+                    <p>{{images}}</p>
+                </div>
+                <div class="infodiv">
+                    <p  class="p1">Albums</p>
+                    <p>{{albums}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="profile-edit">
+        <a href="{% url 'edit-profile' %}"><button>Edit profile</button></a>
+    </div>
+
+{% endblock %}

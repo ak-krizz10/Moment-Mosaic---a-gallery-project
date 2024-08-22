@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    {% load static %}
+    <link href="{% static 'css/bootstrap.min.css' %} " rel="stylesheet">
+    <link href="{% static 'css/tooplate-little-fashion.css' %}" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'header/responsee.css' %}">
+    <link rel="stylesheet" href="{% static 'header/template-style.css' %}">
+    
+    <!-- JAVASCRIPT -->
+    <script type="text/javascript" src="{% static 'header/jquery-1.8.3.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'header/owl.carousel.js' %}"></script>
+    <script type="text/javascript" src="{% static 'header/template-scripts.js' %}"></script> 
+    
+    <!-- FONT -->
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,400,600,900&subset=latin-ext" rel="stylesheet">
+
+</head>
+<header role="banner" class="position-absolute margin-top-30 margin-m-top-0 margin-s-top-0">    
+    <nav class="background-transparent background-transparent-hightlight full-width sticky">
+      <div class="s-12 l-2">
+        <a href="#" class="logo">
+          <!-- Logo version before sticky nav -->
+          <img class="logo-before" src="{% static 'header/final-logo-1.png' %}" alt="">
+          <!-- Logo version after sticky nav -->
+          <img class="logo-after" src="{% static 'header/final-logo-1.png' %}" alt="">
+        </a>
+      </div> 
+      <div class="s-12 l-10">
+        <div class="top-nav right">
+          <p class="nav-text"></p>
+          <ul class="right chevron">
+            <li><a href="{% url 'all' %}">Home</a></li>
+            <li><a href="{% url 'album' %}">Albums</a></li>
+            <li><a href="{% url 'fav' %}">Favourites</a></li> 
+            <li><a href="{% url 'upload' %}">Upload</a></li>           
+            <li><a href="{% url 'profile' %}">Profile</a></li>
+            <li><a href="{% url 'signout' %}">Signout</a></li>
+          </ul>
+        </div>
+      </div>   
+    </nav>
+</header>
+<header class="section background-white">
+    <div class="line text-center">        
+      <h1 class="text-dark text-s-size-30 text-m-size-40 text-l-size-headline text-thin text-line-height-1">Sign Out</h1>
+    </div>  
+  </header>
+<body>
+    
+
+    <section class="sign-in-form section-padding">
+        <div class="container">
+            <div class="row">
+    
+                <div class="col-lg-8 mx-auto col-12 border">
+    
+                    <h1 class="hero-title text-center mb-5">Sign out</h1>
+                    <h3 class="hero-title text-center mb-5">@{{request.user}}</h3>
+                    <div class="row">
+                        <div class="col-lg-8 col-11 mx-auto">
+                            <form  method="post">
+                                {% csrf_token %}
+    
+                                <h4 class="hero-title text-center mb-5">Are you sure you want to signout now?</h4>
+                                <button type="submit" class="btn custom-btn form-control mt-4 mb-3">
+                                    Log Out
+                                </button>
+    
+                                <p class="register text-center">Have another account? <a href="{% url 'signin' %}"><strong>Login</strong></a></p>
+    
+                            </form>
+                        </div>
+                    </div>
+                    
+                </div>
+    
+            </div>
+        </div>
+    </section>
+    
+
+  
+
+</body>
+</html>

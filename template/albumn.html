@@ -1,0 +1,38 @@
+{% extends 'base1.html' %}
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'style.css' %}">
+{% block content %}
+<header class="section background-white">
+    <div class="line text-center">        
+      <h1 class="text-dark text-s-size-30 text-m-size-40 text-l-size-headline text-thin text-line-height-1">Albums </h1>
+      <p class="margin-bottom-0 text-size-16 text-dark">Precious moments , Precious clicks </p>
+    </div>  
+  </header> 
+
+
+
+<div class="ag-format-container">
+    <div class="ag-courses_box">
+        {% for i in albumns %}
+      <div class="ag-courses_item">
+        
+        <a href="{% url 'open' i.id %}" class="ag-courses-item_link">
+          <div class="ag-courses-item_bg"></div>
+  
+          <div class="ag-courses-item_title">
+            {{i.albumn|upper}}
+          </div>
+  
+          <div class="ag-courses-item_date-box">
+            <span class="ag-courses-item_date">
+              {{i.created}}
+            </span>
+          </div>
+        </a>
+        
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}

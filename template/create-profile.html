@@ -1,0 +1,27 @@
+{% extends 'base1.html' %}
+{% load static %}
+
+
+{% block content %}
+<header class="section background-white">
+    <div class="line text-center">        
+      <h1 class="text-dark text-s-size-30 text-m-size-40 text-l-size-headline text-thin text-line-height-1">Profile</h1>
+    </div>  
+  </header> 
+
+<div class="profileuploadbody">
+  <form method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+    <div class="profileinput">
+
+      {{form.name}}
+      {{form.email}}
+      {{form.pic}}
+      {{form.dob}}
+
+      <input type="submit" value="Continue">
+    </div>
+  </form>
+</div>
+
+{% endblock %}

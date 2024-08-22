@@ -1,0 +1,30 @@
+{% extends 'base1.html' %}
+
+
+
+
+
+{% block content %}
+<header class="section background-white">
+    <div class="line text-center">        
+      <h1 class="text-dark text-s-size-30 text-m-size-40 text-l-size-headline text-thin text-line-height-1">Moment</h1>
+      <p class="margin-bottom-0 text-size-16 text-dark">Feel the moment </p>
+    </div>  
+  </header> 
+   
+<div class="imagebody">
+    <div class="fullimage">
+        <img src="/{{pic.image}}">    
+    </div>
+    <div class="imageactions">
+      <span>Uploaded on {{pic.uploaded}}</span>
+      {% if favourite %}
+      <a href="{% url 'fav-remove' pic.id %}"><span>Remove from favourites</span></a>
+      {% else %}
+      <a href="{% url 'fav-add' pic.id %}"><span>Add to favourites</span></a>
+      {% endif %}
+      <a href="{% url 'del' pic.id %}" onclick="return confirm('Are you sure?The image will be deleted.')"><span>Delete</span></a>
+      <a href="/{{pic.image}}" download><span>Download</span></a>
+    </div>        
+</div>
+{% endblock%}
